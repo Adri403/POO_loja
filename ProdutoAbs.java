@@ -3,12 +3,14 @@ public abstract class ProdutoAbs implements Produto {
     private String modelo;
     private String cor;
     private String identificador;
+    private String descricao;
 
-    public ProdutoAbs(String novoModelo, String novaCor, double novoValor, String novoIdentificador  ){
+    public ProdutoAbs(String novoModelo, String novaCor, double novoValor, String novoIdentificador, String novaDescricao ){
         this.valor = novoValor;
         this.modelo = novoModelo;
         this.cor = novaCor;
         this.identificador = novoIdentificador;
+        this.descricao = novaDescricao;
     }
         public double getValor(){
             return valor;
@@ -24,6 +26,10 @@ public abstract class ProdutoAbs implements Produto {
     
         public String getIdentificador(){
             return identificador;
+        }
+
+        public String getDescricao(){
+            return descricao;
         }
     
         public void setValor(double novoValor) {
@@ -41,9 +47,13 @@ public abstract class ProdutoAbs implements Produto {
         public void setIdentificador(String identificador) {
             this.identificador = identificador;
         }
+
+        public void setDescricao(String descricao) {
+            this.descricao = descricao;
+        }
     
         public String toString() {
-            return "Modelo: " + getModelo() + "Cor: " + getCor() + "Valor: " + getValor() + "Id: " + getIdentificador();
+            return "Modelo: " + getModelo() + "Cor: " + getCor() + "Valor: " + getValor() + "Id: " + getIdentificador() + "Descrição: " + getDescricao();
         }
     
         public boolean equals(Object obj) {
