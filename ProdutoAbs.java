@@ -1,0 +1,57 @@
+public abstract class ProdutoAbs implements Produto {
+    private double valor;
+    private String modelo;
+    private String cor;
+    private String identificador;
+
+    public ProdutoAbs(String novoModelo, String novaCor, double novoValor, String novoIdentificador  ){
+        this.valor = novoValor;
+        this.modelo = novoModelo;
+        this.cor = novaCor;
+        this.identificador = novoIdentificador;
+    }
+        public double getValor(){
+            return valor;
+        }
+    
+        public String getModelo(){
+            return modelo;
+        }
+        
+        public String getCor(){
+            return cor;
+        }
+    
+        public String getIdentificador(){
+            return identificador;
+        }
+    
+        public void setValor(double novoValor) {
+            this.valor = novoValor;
+        }
+    
+        public void setModelo(String novoModelo) {
+            this.modelo = novoModelo;
+        }
+    
+        public void setCor(String cor) {
+            this.cor = cor;
+        }
+    
+        public void setIdentificador(String identificador) {
+            this.identificador = identificador;
+        }
+    
+        public String toString() {
+            return "Modelo: " + getModelo() + "Cor: " + getCor() + "Valor: " + getValor() + "Id: " + getIdentificador();
+        }
+    
+        public boolean equals(Object obj) {
+            if (obj instanceof ProdutoAbs) {
+                ProdutoAbs p = (ProdutoAbs) obj;
+                if (p.toString().equals(this.toString()))
+                return true;
+            }
+            return false;
+        }
+}
