@@ -53,7 +53,7 @@ public abstract class ProdutoAbs implements Produto {
         }
     
         public String toString() {
-            return "Modelo: " + getModelo() + "Cor: " + getCor() + "Valor: " + getValor() + "Id: " + getIdentificador() + "Descrição: " + getDescricao();
+            return "Modelo: " + getModelo() + " Cor: " + getCor() + " Valor: " + getValor() + " Id: " + getIdentificador() + " Descrição: " + getDescricao();
         }
     
         public boolean equals(Object obj) {
