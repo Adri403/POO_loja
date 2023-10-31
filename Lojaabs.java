@@ -1,6 +1,23 @@
 import java.util.ArrayList;
 public abstract class Lojaabs implements Loja{
     private ArrayList<Produto> produtos;
+    private String nome;
+    private String localizacao;
+
+    public Lojaabs(String Novonome, String NovaLocalizacao){
+      this.nome = Novonome;
+      this.localizacao = NovaLocalizacao;
+      this.produtos = new ArrayList<Produto>();
+    }
+
+    public String getNome(){
+      return nome;
+    }
+
+    public String getLocalizacao(){
+      return localizacao;
+    }
+
     public Lojaabs(){
         produtos = new ArrayList<Produto>();
       }
