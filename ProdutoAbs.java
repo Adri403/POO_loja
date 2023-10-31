@@ -12,6 +12,12 @@ public abstract class ProdutoAbs implements Produto {
         this.identificador = novoIdentificador;
         this.descricao = novaDescricao;
     }
+    public ProdutoAbs(String novoModelo, double novoValor, String novoIdentificador, String novaDescricao ){
+        this.valor = novoValor;
+        this.modelo = novoModelo;
+        this.identificador = novoIdentificador;
+        this.descricao = novaDescricao;
+    }
         public double getValor(){
             return valor;
         }
