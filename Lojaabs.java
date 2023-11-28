@@ -26,7 +26,7 @@ public abstract class Lojaabs implements Loja{
          produtos.add(produto);
       }
     
-      public Produto recupera(String identificador){
+      public Produto recupera(String identificador) throws ProdutoNaoEncontrado{
         for (int i = 0; i < produtos.size(); i++){
           Produto r = produtos.get(i);
     
@@ -34,7 +34,7 @@ public abstract class Lojaabs implements Loja{
             return r;
           }
         }
-        return null;
+        throw new ProdutoNaoEncontrado ("O produto " + identificador + " não foi encontrado");
       }
     public void remove(String identificador){
         Produto p = recupera(identificador);

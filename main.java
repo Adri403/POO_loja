@@ -1,5 +1,5 @@
 import java.util.List;
-public class main {
+public class Main {
     public static void main(String[] args) {
 
 
@@ -34,10 +34,13 @@ public class main {
     loja3.cadastra(computador2);
     Produto c1 = loja3.recupera("iPhone 14 Pro");
     System.out.println(c1);
-    loja1.remove("Galaxy A34");
-
-
-
+    loja2.remove("Galaxy A34");
+    try {
+        Produto x = loja3.recupera("iPhone 15");
+        System.out.println(x);
+    } catch (Exception e) {
+        System.out.println(e.getMessage());
+    }
     }
 }
 
